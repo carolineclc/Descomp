@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
+
+entity LogicaDeDesvio is
+    generic ( larguraDados : natural := 4 );
+    port (
+      seletor:  in STD_LOGIC_VECTOR(2 downto 0) ;
+      saida:    out std_logic
+		
+    );
+end entity;
+
+architecture comportamento of LogicaDeDesvio is
+   signal JMP : std_logic;
+   signal JEQ : std_logic;
+
+    begin
+      JMP      <= '0';
+      JEQ 		<= '1';
+      saida <= JMP when (seletor = "000") or (seletor = "010" ) else JEQ when (seletor = "101") or (seletor = "011")
+		else JMP;
+
+end architecture;

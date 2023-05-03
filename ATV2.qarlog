@@ -1,0 +1,47 @@
+Quartus Prime Archive log --	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2.qarlog
+
+Archive:	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2.qar
+Date:		Tue Mar 07 10:37:49 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV1.qpf
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ULASomaSub.vhd
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/Waveform.vwf
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/decoderGeneric.vhd
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/edgeDetector.vhd
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/memoriaROM.vhd
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/muxGenerico2x1.vhd
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/registradorGenerico.vhd
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/somaConstante.vhd
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/top-level.qsf
+C:/Users/carol/Documents/Insper/6_Semestre/Descomp/toplevel.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Mar 14 08:59:21 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Fri Mar 17 11:40:43 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Sun Mar 19 20:55:22 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Apr 04 12:19:32 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2_restored/
+		 - successfully.
