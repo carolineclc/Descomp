@@ -1,0 +1,19 @@
+Quartus Prime Archive log --	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/Aula1.qarlog
+
+Archive:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/Aula1.qar
+Date:		Fri Aug 18 10:56:13 2023
+Quartus Prime		22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/ULASomaSub.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/edgeDetector.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/muxGenerico2x1.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/registradorGenerico.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/toplevel.qpf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/toplevel.qsf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/AULA1/toplevel.vhd
+c:/intelfpga_lite/22.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 8 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
