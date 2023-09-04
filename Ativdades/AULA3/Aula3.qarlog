@@ -1,0 +1,23 @@
+Quartus Prime Archive log --	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/Aula3.qarlog
+
+Archive:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/Aula3.qar
+Date:		Mon Sep 04 13:20:37 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/ULASomaSub.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/Waveform.vwf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/decoderInstru.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/edgeDetector.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/memoriaROM.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/muxGenerico2x1.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/registradorGenerico.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/somaConstante.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/toplevel.qpf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/toplevel.qsf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/Ativdades/toplevel.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 12 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
