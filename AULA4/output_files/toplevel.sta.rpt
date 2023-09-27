@@ -1,5 +1,5 @@
 Timing Analyzer report for toplevel
-Fri Sep 15 22:07:43 2023
+Tue Sep 26 14:33:36 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -98,16 +98,16 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
-; Average used               ; 1.21        ;
+; Average used               ; 1.20        ;
 ; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   2.5%      ;
 ;     Processor 3            ;   2.4%      ;
-;     Processor 4            ;   2.4%      ;
-;     Processor 5            ;   2.4%      ;
-;     Processors 6-14        ;   1.3%      ;
+;     Processor 4            ;   2.3%      ;
+;     Processor 5            ;   2.3%      ;
+;     Processors 6-14        ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -707,7 +707,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Fri Sep 15 22:07:37 2023
+    Info: Processing started: Tue Sep 26 14:33:33 2023
 Info: Command: quartus_sta toplevel -c toplevel
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -800,8 +800,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 5196 megabytes
-    Info: Processing ended: Fri Sep 15 22:07:43 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Tue Sep 26 14:33:36 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

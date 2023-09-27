@@ -1,5 +1,5 @@
 Flow report for toplevel
-Fri Sep 15 22:08:00 2023
+Tue Sep 26 14:33:36 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Sep 15 22:08:00 2023       ;
+; Flow Status                     ; Successful - Tue Sep 26 14:33:32 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/15/2023 22:06:43 ;
+; Start date & time ; 09/26/2023 14:32:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; toplevel            ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88974388693043.169482640326412         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 88974388693043.169574957426416         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -98,13 +98,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4915 MB             ; 00:00:10                           ;
-; Fitter               ; 00:00:37     ; 1.0                     ; 7280 MB             ; 00:00:52                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4824 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.2                     ; 5196 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4714 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4723 MB             ; 00:00:01                           ;
-; Total                ; 00:00:58     ; --                      ; --                  ; 00:01:07                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4917 MB             ; 00:00:04                           ;
+; Fitter               ; 00:00:26     ; 1.0                     ; 7287 MB             ; 00:00:24                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4823 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 5196 MB             ; 00:00:03                           ;
+; Total                ; 00:00:38     ; --                      ; --                  ; 00:00:33                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,8 +115,6 @@ https://fpgasoftware.intel.com/eula.
 ; Fitter               ; Crol             ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; Crol             ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Crol             ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Crol             ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Crol             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -129,8 +125,6 @@ quartus_map --read_settings_files=on --write_settings_files=off toplevel -c topl
 quartus_fit --read_settings_files=off --write_settings_files=off toplevel -c toplevel
 quartus_asm --read_settings_files=off --write_settings_files=off toplevel -c toplevel
 quartus_sta toplevel -c toplevel
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off toplevel -c toplevel --vector_source=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA4/Waveform.vwf --testbench_file=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA4/simulation/qsim/Waveform.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA4/simulation/qsim/ toplevel -c toplevel
 
 
 

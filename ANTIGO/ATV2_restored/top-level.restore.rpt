@@ -1,5 +1,5 @@
 Restore Archived Project report for top-level
-Tue Apr 04 12:19:32 2023
+Mon Sep 25 19:10:16 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Tue Apr 04 12:19:32 2023 ;
+; Restore Archived Project Status ; Successful - Mon Sep 25 19:10:16 2023 ;
 ; Revision Name                   ; top-level                             ;
 ; Top-level Entity Name           ; toplevel                              ;
 ; Family                          ; Cyclone V                             ;
@@ -47,12 +47,12 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored 'C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2.qar' into the 'C:/Users/carol/Documents/Insper/6_Semestre/Descomp/ATV2_restored/' directory
+Info: Successfully restored 'C:/Users/carol/Documents/Insper/6Semestre/Descomp/ANTIGO/ATV2.qar' into the 'C:/Users/carol/Documents/Insper/6Semestre/Descomp/ANTIGO/ATV2_restored/' directory
 Info: Generated report 'top-level.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 4819 megabytes
-    Info: Processing ended: Tue Apr 04 12:19:32 2023
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Mon Sep 25 19:10:16 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:00
 

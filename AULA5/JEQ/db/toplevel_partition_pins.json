@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "PC_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC_OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Palavra_Controle[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Palavra_Controle[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Palavra_Controle[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Palavra_Controle[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Palavra_Controle[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Palavra_Controle[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Palavra_Controle[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RegistradorA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OpULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "EntradaB_ULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
