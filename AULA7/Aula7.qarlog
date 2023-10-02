@@ -1,0 +1,29 @@
+Quartus Prime Archive log --	C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/Aula7.qarlog
+
+Archive:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/Aula7.qar
+Date:		Fri Sep 29 22:30:12 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/FlipFlop.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/ULASomaSub.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/Waveform.vwf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/cpu.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/decoder3x8.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/decoderInstru.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/edgeDetector.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/logicaDesvio.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/memoriaRAM.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/memoriaROM.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/muxGenerico2x1.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/muxGenerico4x1.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/registradorGenerico.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/somaConstante.vhd
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/toplevel.qpf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/toplevel.qsf
+C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/toplevel.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 18 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

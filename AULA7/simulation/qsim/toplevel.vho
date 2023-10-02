@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "09/29/2023 14:47:41"
+-- DATE "10/02/2023 10:20:30"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484
@@ -40,7 +40,7 @@ ENTITY 	toplevel IS
     PORT (
 	CLOCK_50 : IN std_logic;
 	KEY : IN std_logic_vector(3 DOWNTO 0);
-	LEDR : BUFFER std_logic_vector(9 DOWNTO 0)
+	LEDR : OUT std_logic_vector(9 DOWNTO 0)
 	);
 END toplevel;
 

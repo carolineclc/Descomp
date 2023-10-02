@@ -1,5 +1,5 @@
 Fitter report for toplevel
-Fri Sep 29 15:00:17 2023
+Fri Sep 29 22:29:55 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Sep 29 15:00:17 2023       ;
+; Fitter Status                   ; Successful - Fri Sep 29 22:29:55 2023       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; toplevel                                    ;
 ; Top-level Entity Name           ; toplevel                                    ;
@@ -151,17 +151,17 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 20          ;
 ; Maximum allowed            ; 14          ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 14          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.3%      ;
+;     Processor 2            ;   0.4%      ;
+;     Processor 3            ;   0.4%      ;
 ;     Processor 4            ;   0.3%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
-;     Processor 7            ;   0.2%      ;
+;     Processor 5            ;   0.3%      ;
+;     Processor 6            ;   0.3%      ;
+;     Processor 7            ;   0.3%      ;
 ;     Processors 8-14        ;   0.2%      ;
 +----------------------------+-------------+
 
@@ -1368,19 +1368,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.29 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA7/output_files/toplevel.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 60 warnings
-    Info: Peak virtual memory: 7298 megabytes
-    Info: Processing ended: Fri Sep 29 15:00:17 2023
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 7291 megabytes
+    Info: Processing ended: Fri Sep 29 22:29:56 2023
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +----------------------------+
