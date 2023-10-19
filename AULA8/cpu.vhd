@@ -15,7 +15,8 @@ entity cpu is
 	 Data_OUT : out std_logic_vector(7 downto 0);
 	 Data_IN : in std_logic_vector (7 downto 0);
 	 CLK : in std_logic;
-	 Data_Address : out std_logic_vector(8 downto 0)
+	 Data_Address : out std_logic_vector(8 downto 0);
+	 Palavra_Controle : out std_logic_vector (11 downto 0)
 	 
 	 
 
@@ -90,7 +91,7 @@ MuxProxPC : entity work.muxGenerico4x1 generic map (larguraDados => larguraEnder
                  seletor_MUX => saida_LD,
                  saida_MUX => Mux_ProxPC );
 					  
-FlagZero : entity work.FlipFlop   generic map (larguraDados => larguraDados)
+FlagZero : entity work.FlipFlop
           port map (DIN => flag, DOUT =>saida_flag, ENABLE =>Sinais_Controle(2), CLK => CLK, RST => '0');
 			 
 LogicaDesvio1 :  entity work.logicaDesvio
@@ -109,7 +110,7 @@ Habilita_A <= Sinais_Controle(5);
 Reset_A <= Sinais_Controle(1);
 Operacao_ULA <= Sinais_Controle(4 downto 3);
 Data_Address <= Instruction_IN(8 downto 0);
---Palavra_Controle <= Sinais_Controle;
+Palavra_Controle <= Sinais_Controle;
 --EntradaB_ULA <= MUX_REG1;
 --OpULA <= Sinais_Controle(4 downto 3);
 --RegistradorA <= REG1_ULA_A;

@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim
 Etoplevel
-Z1 w1696252926
+Z1 w1697595581
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,19 +20,19 @@ Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 0
+!i122 14
 R0
 Z11 8toplevel.vho
 Z12 Ftoplevel.vho
 l0
 L39 1
-V8KzEAU>l_AR[kaE`O=:hX0
-!s100 gZWNi^2W=CKiDWH9MSZ@Y2
+VCaY@[0R`h^ijZf66oT:200
+!s100 14H0=QGP]Nn`OglkR1>7Z0
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1696252927
+Z14 !s110 1697595582
 !i10b 1
-Z15 !s108 1696252927.000000
+Z15 !s108 1697595582.000000
 Z16 !s90 -work|work|toplevel.vho|
 Z17 !s107 toplevel.vho|
 !i113 1
@@ -48,12 +48,12 @@ R7
 R8
 R9
 R10
-DEx4 work 8 toplevel 0 22 8KzEAU>l_AR[kaE`O=:hX0
-!i122 0
-l294
-L65 2964
-VGNBXo9@UiWbZ1X9VLO7701
-!s100 L`BoC[lblCAMDC6kVz?Ma3
+DEx4 work 8 toplevel 0 22 CaY@[0R`h^ijZf66oT:200
+!i122 14
+l348
+L126 3871
+VVcM<1h:gl9_E;WRRZ?:cV1
+!s100 T?zRdz^dmjlTP6zSQ2=Kf3
 R13
 32
 R14
@@ -65,13 +65,13 @@ R17
 R18
 R19
 Etoplevel_vhd_vec_tst
-R1
+Z20 w1697595580
 R8
 R9
-!i122 1
+!i122 15
 R0
-Z20 8Waveform.vwf.vht
-Z21 FWaveform.vwf.vht
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
 l0
 L32 1
 VZhGk;Of=R9Yb<1fPEhI7?0
@@ -81,27 +81,27 @@ R13
 R14
 !i10b 1
 R15
-Z22 !s90 -work|work|Waveform.vwf.vht|
-!s107 Waveform.vwf.vht|
+Z23 !s90 -work|work|Waveform1.vwf.vht|
+Z24 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
 Atoplevel_arch
 R8
 R9
-DEx4 work 20 toplevel_vhd_vec_tst 0 22 ZhGk;Of=R9Yb<1fPEhI7?0
-!i122 1
-l47
-L34 42
-VK6e4P@0m>OY]_NTC@0mL]0
-!s100 neCDfkSZe[:n`bmR6XDbS3
+Z25 DEx4 work 20 toplevel_vhd_vec_tst 0 22 ZhGk;Of=R9Yb<1fPEhI7?0
+!i122 15
+l63
+L34 66
+VLMV6JHYGaKLcb98eL;Q7a0
+!s100 M3G?=j8egfTBJL6L?ePX=0
 R13
 32
 R14
 !i10b 1
 R15
-R22
-Z23 !s107 Waveform.vwf.vht|
+R23
+R24
 !i113 1
 R18
 R19

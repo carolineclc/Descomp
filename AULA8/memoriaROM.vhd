@@ -37,29 +37,40 @@ architecture assincrona of memoriaROM is
   begin
       -- Palavra de Controle = SelMUX, Habilita_A, Reset_A, Operacao_ULA
       -- Inicializa os endereços:
-        tmp(0)  := LDI & '0' & x"01"; 
-        tmp(1)  := STA & '0' & x"00"; 	  
-        tmp(2)  := SOMA & '0' & x"00"; 
-        tmp(3)  := STA & '1' & x"20";
-		  
-        tmp(4)  := SOMA & '0' & x"00"; 
-        tmp(5)  := STA & '1' & x"21"; 
+tmp(0) := x"4" & '0' & x"00";	-- LDI $0
+tmp(1) := x"5" & '1' & x"20";	-- STA @288
+tmp(2) := x"5" & '1' & x"21";	-- STA @289
+tmp(3) := x"5" & '1' & x"22";	-- STA @290
+tmp(4) := x"5" & '1' & x"23";	-- STA @291
+tmp(5) := x"5" & '1' & x"24";	-- STA @292
+tmp(6) := x"5" & '1' & x"25";	-- STA @293
+tmp(7) := x"5" & '1' & x"00";	-- STA @256
+tmp(8) := x"5" & '1' & x"01";	-- STA @257
+tmp(9) := x"5" & '1' & x"02";	-- STA @258
+tmp(10) := x"5" & '1' & x"FF";	-- STA @511
+tmp(11) := x"5" & '1' & x"FE";	-- STA @510
+tmp(12) := x"5" & '0' & x"02";	-- STA @2 	#VALOR DAS UNIDADES
+tmp(13) := x"5" & '0' & x"03";	-- STA @3 	#VALOR DO LIMITE
+tmp(14) := x"5" & '0' & x"00";	-- STA @0 	#CONSTANTE 0
+tmp(15) := x"4" & '0' & x"01";	-- LDI $1
+tmp(16) := x"5" & '0' & x"01";	-- STA @1 	#CONSTANTE 1
+tmp(17) := x"1" & '1' & x"60";	-- LDA @352 	#LE O VALOR DO BOTAO DE INCREMENTO
+tmp(18) := x"8" & '0' & x"00";	-- CEQ @0 	#COMPARA SE O VALOR DE KEY 0 E 0
+tmp(19) := x"7" & '0' & x"15";	-- JEQ @ cont
+tmp(20) := x"9" & '0' & x"1B";	-- JSR @ incremento
+tmp(21) := x"1" & '0' & x"02";	-- LDA @2
+tmp(22) := x"5" & '1' & x"20";	-- STA @288 	#ESCREVE O VALOR NO DISPLAY HEX0
+tmp(23) := x"1" & '0' & x"01";	-- LDA @1
+tmp(24) := x"8" & '1' & x"64";	-- CEQ @356
+tmp(25) := x"7" & '0' & x"00";	-- JEQ @comeco
+tmp(26) := x"6" & '0' & x"11";	-- JMP @inicio
+tmp(27) := x"5" & '1' & x"FF";	-- STA @511
+tmp(28) := x"1" & '0' & x"02";	-- LDA @2
+tmp(29) := x"2" & '0' & x"01";	-- SOMA @1
+tmp(30) := x"5" & '0' & x"02";	-- STA @2
+tmp(31) := x"A" & '0' & x"00";	-- RET
 
-        tmp(6)  := SOMA & '0' & x"00"; 
-        tmp(7)  := STA & '1' & x"22"; 
-		  
-        tmp(8)  := SOMA & '0' & x"00"; 
-        tmp(9)  := STA & '1' & x"23"; 
-		  
-		  tmp(10)  := SOMA & '0' & x"00"; 
-        tmp(11)  := STA & '1' & x"24"; 
 
-        tmp(12)  := SOMA & '0' & x"00"; 
-        tmp(13)  := STA & '1' & x"25"; 
-		  
-		  tmp(14)  := JMP & '0' & x"02"; 
-
- 
 
 
         return tmp;

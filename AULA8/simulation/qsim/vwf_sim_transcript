@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off toplevel -c toplevel --vector_source="C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/Waveform.vwf" --testbench_file="C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off toplevel -c toplevel --vector_source="C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/Waveform1.vwf" --testbench_file="C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/Waveform1.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,9 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Oct 02 10:22:05 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off toplevel -c toplevel --vector_source=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/Waveform.vwf --testbench_file=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/Waveform.vwf.vht
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+    Info: Processing started: Tue Oct 17 23:19:40 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off toplevel -c toplevel --vector_source=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/Waveform1.vwf --testbench_file=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/Waveform1.vwf.vht
 
 Completed successfully. 
 
@@ -53,13 +52,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Oct 02 10:22:06 2023
+    Info: Processing started: Tue Oct 17 23:19:41 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/ toplevel -c toplevel
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file toplevel.vho in folder "C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Mon Oct 02 10:22:06 2023
+    Info: Processing ended: Tue Oct 17 23:19:41 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -83,7 +81,7 @@ Reading pref.tcl
 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:22:07 on Oct 02,2023
+# Start time: 23:19:42 on Oct 17,2023
 # vcom -work work toplevel.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -93,27 +91,27 @@ Reading pref.tcl
 # -- Loading package dffeas_pack
 # -- Loading package altera_primitives_components
 # -- Loading package altera_lnsim_components
-
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
 # -- Compiling entity toplevel
 # -- Compiling architecture structure of toplevel
-# End time: 10:22:07 on Oct 02,2023, Elapsed time: 0:00:00
+
+# End time: 23:19:42 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:22:07 on Oct 02,2023
-# vcom -work work Waveform.vwf.vht 
-# -- Loading package STANDARD
+# Start time: 23:19:42 on Oct 17,2023
+# vcom -work work Waveform1.vwf.vht 
 
+# -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity toplevel_vhd_vec_tst
 # -- Compiling architecture toplevel_arch of toplevel_vhd_vec_tst
-# End time: 10:22:07 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:19:42 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.toplevel_vhd_vec_tst 
-# Start time: 10:22:07 on Oct 02,2023
+# Start time: 23:19:42 on Oct 17,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -130,26 +128,30 @@ Reading pref.tcl
 # Loading cyclonev.cyclonev_io_obuf(arch)
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_clkena(behavior)
-# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 28030 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# ** Warning: Design size of 35166 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 
-# End time: 10:22:07 on Oct 02,2023, Elapsed time: 0:00:00
+# End time: 23:19:42 on Oct 17,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/Waveform.vwf...
+Reading C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/Waveform1.vwf...
 
 Reading C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/toplevel.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/toplevel_20231002102208.sim.vwf
+Warning: entrada - signal not found in VCD.
+
+Warning: saida - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/toplevel_20231017231943.sim.vwf
 
 Finished VCD to VWF conversion.
 

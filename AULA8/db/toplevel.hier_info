@@ -1,19 +1,22 @@
 |toplevel
-CLOCK_50 => ~NO_FANOUT~
-KEY[0] => cpu:CPU.CLK
-KEY[0] => memoriaram:RAM1.clk
-KEY[0] => flipflop:FF_LEDR9.CLK
-KEY[0] => flipflop:FF_LEDR8.CLK
-KEY[0] => registradorgenerico:REG_LEDR7downto0.CLK
-KEY[0] => registradorgenerico:REG_H0.CLK
-KEY[0] => registradorgenerico:REG_H1.CLK
-KEY[0] => registradorgenerico:REG_H2.CLK
-KEY[0] => registradorgenerico:REG_H3.CLK
-KEY[0] => registradorgenerico:REG_H4.CLK
-KEY[0] => registradorgenerico:REG_H5.CLK
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
+CLOCK_50 => cpu:CPU.CLK
+CLOCK_50 => memoriaram:RAM1.clk
+CLOCK_50 => flipflop:FF_LEDR9.CLK
+CLOCK_50 => flipflop:FF_LEDR8.CLK
+CLOCK_50 => registradorgenerico:REG_LEDR7downto0.CLK
+CLOCK_50 => registradorgenerico:REG_H0.CLK
+CLOCK_50 => registradorgenerico:REG_H1.CLK
+CLOCK_50 => registradorgenerico:REG_H2.CLK
+CLOCK_50 => registradorgenerico:REG_H3.CLK
+CLOCK_50 => registradorgenerico:REG_H4.CLK
+CLOCK_50 => registradorgenerico:REG_H5.CLK
+CLOCK_50 => edgedetector:ED0.clk
+CLOCK_50 => edgedetector:ED1.clk
+KEY[0] => edgedetector:ED0.entrada
+KEY[1] => edgedetector:ED1.entrada
+KEY[2] => buffer_3_state_1porta:Buff_KEY2.entrada
+KEY[3] => buffer_3_state_1porta:Buff_KEY3.entrada
+FPGA_RESET_N => buffer_3_state_1porta:Buff_FPGA_RESET.entrada
 LEDR[0] <= registradorgenerico:REG_LEDR7downto0.DOUT[0]
 LEDR[1] <= registradorgenerico:REG_LEDR7downto0.DOUT[1]
 LEDR[2] <= registradorgenerico:REG_LEDR7downto0.DOUT[2]
@@ -66,6 +69,18 @@ HEX5[3] <= conversorhex7seg:DEC_H5.saida7seg[3]
 HEX5[4] <= conversorhex7seg:DEC_H5.saida7seg[4]
 HEX5[5] <= conversorhex7seg:DEC_H5.saida7seg[5]
 HEX5[6] <= conversorhex7seg:DEC_H5.saida7seg[6]
+SW[0] => buffer_3_state_8portas:Buff_SW7downto0.entrada[0]
+SW[1] => buffer_3_state_8portas:Buff_SW7downto0.entrada[1]
+SW[2] => buffer_3_state_8portas:Buff_SW7downto0.entrada[2]
+SW[3] => buffer_3_state_8portas:Buff_SW7downto0.entrada[3]
+SW[4] => buffer_3_state_8portas:Buff_SW7downto0.entrada[4]
+SW[5] => buffer_3_state_8portas:Buff_SW7downto0.entrada[5]
+SW[6] => buffer_3_state_8portas:Buff_SW7downto0.entrada[6]
+SW[7] => buffer_3_state_8portas:Buff_SW7downto0.entrada[7]
+SW[8] => buffer_3_state_1porta:Buff_SW8.entrada
+SW[9] => buffer_3_state_1porta:Buff_SW9.entrada
+entrada <= entrada.DB_MAX_OUTPUT_PORT_TYPE
+saida <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |toplevel|cpu:CPU
@@ -139,6 +154,18 @@ Data_Address[5] <= Instruction_IN[5].DB_MAX_OUTPUT_PORT_TYPE
 Data_Address[6] <= Instruction_IN[6].DB_MAX_OUTPUT_PORT_TYPE
 Data_Address[7] <= Instruction_IN[7].DB_MAX_OUTPUT_PORT_TYPE
 Data_Address[8] <= Instruction_IN[8].DB_MAX_OUTPUT_PORT_TYPE
+Palavra_Controle[0] <= decoderinstru:DEC_Instruction_IN.saida[0]
+Palavra_Controle[1] <= decoderinstru:DEC_Instruction_IN.saida[1]
+Palavra_Controle[2] <= decoderinstru:DEC_Instruction_IN.saida[2]
+Palavra_Controle[3] <= decoderinstru:DEC_Instruction_IN.saida[3]
+Palavra_Controle[4] <= decoderinstru:DEC_Instruction_IN.saida[4]
+Palavra_Controle[5] <= decoderinstru:DEC_Instruction_IN.saida[5]
+Palavra_Controle[6] <= decoderinstru:DEC_Instruction_IN.saida[6]
+Palavra_Controle[7] <= decoderinstru:DEC_Instruction_IN.saida[7]
+Palavra_Controle[8] <= decoderinstru:DEC_Instruction_IN.saida[8]
+Palavra_Controle[9] <= decoderinstru:DEC_Instruction_IN.saida[9]
+Palavra_Controle[10] <= decoderinstru:DEC_Instruction_IN.saida[10]
+Palavra_Controle[11] <= decoderinstru:DEC_Instruction_IN.saida[11]
 
 
 |toplevel|cpu:CPU|muxGenerico2x1:MUX1_ULA
@@ -460,7 +487,7 @@ DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ENABLE => DOUT~reg0.ENA
 CLK => DOUT~reg0.CLK
-RST => ~NO_FANOUT~
+RST => DOUT~reg0.ACLR
 
 
 |toplevel|cpu:CPU|logicaDesvio:LogicaDesvio1
@@ -686,7 +713,7 @@ DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ENABLE => DOUT~reg0.ENA
 CLK => DOUT~reg0.CLK
-RST => ~NO_FANOUT~
+RST => DOUT~reg0.ACLR
 
 
 |toplevel|FlipFlop:FF_LEDR8
@@ -694,7 +721,7 @@ DIN => DOUT~reg0.DATAIN
 DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ENABLE => DOUT~reg0.ENA
 CLK => DOUT~reg0.CLK
-RST => ~NO_FANOUT~
+RST => DOUT~reg0.ACLR
 
 
 |toplevel|registradorGenerico:REG_LEDR7downto0
@@ -1386,5 +1413,188 @@ saida7seg[3] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 saida7seg[4] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 saida7seg[5] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
 saida7seg[6] <= saida7seg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_8portas:Buff_SW7downto0
+entrada[0] => saida[0].DATAIN
+entrada[1] => saida[1].DATAIN
+entrada[2] => saida[2].DATAIN
+entrada[3] => saida[3].DATAIN
+entrada[4] => saida[4].DATAIN
+entrada[5] => saida[5].DATAIN
+entrada[6] => saida[6].DATAIN
+entrada[7] => saida[7].DATAIN
+habilita => saida[0].OE
+habilita => saida[1].OE
+habilita => saida[2].OE
+habilita => saida[3].OE
+habilita => saida[4].OE
+habilita => saida[5].OE
+habilita => saida[6].OE
+habilita => saida[7].OE
+saida[0] <= saida[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_SW8
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_SW9
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY00
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY01
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY02
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY03
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY04
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY05
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY06
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY07
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY10
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY11
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY12
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY13
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY14
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY15
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY16
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY17
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY2
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_KEY3
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|buffer_3_state_1porta:Buff_FPGA_RESET
+entrada => saida.DATAIN
+habilita => saida.OE
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|edgeDetector:ED0
+clk => saidaQ.CLK
+entrada => saidaQ.DATAIN
+entrada => saida.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|FlipFlop:FFK0
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
+
+
+|toplevel|edgeDetector:ED1
+clk => saidaQ.CLK
+entrada => saidaQ.DATAIN
+entrada => saida.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|toplevel|FlipFlop:FFK1
+DIN => DOUT~reg0.DATAIN
+DOUT <= DOUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ENABLE => DOUT~reg0.ENA
+CLK => DOUT~reg0.CLK
+RST => DOUT~reg0.ACLR
 
 

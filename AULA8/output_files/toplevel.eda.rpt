@@ -1,5 +1,5 @@
 EDA Netlist Writer report for toplevel
-Mon Oct 02 10:22:06 2023
+Tue Oct 17 23:19:41 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Oct 02 10:22:06 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Oct 17 23:19:41 2023 ;
 ; Revision Name             ; toplevel                              ;
 ; Top-level Entity Name     ; toplevel                              ;
 ; Family                    ; Cyclone V                             ;
@@ -95,13 +95,12 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Oct 02 10:22:06 2023
+    Info: Processing started: Tue Oct 17 23:19:41 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim/ toplevel -c toplevel
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file toplevel.vho in folder "C:/Users/carol/Documents/Insper/6Semestre/Descomp/AULA8/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4722 megabytes
-    Info: Processing ended: Mon Oct 02 10:22:06 2023
+    Info: Processing ended: Tue Oct 17 23:19:41 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
