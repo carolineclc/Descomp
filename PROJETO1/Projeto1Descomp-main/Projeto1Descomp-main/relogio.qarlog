@@ -1,0 +1,84 @@
+Quartus Prime Archive log --	/home/lemon/Descomp/Relogio/relogio.qarlog
+
+Archive:	/home/lemon/Descomp/Relogio/relogio.qar
+Date:		Fri Oct 27 16:05:50 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/lemon/Descomp/Relogio/FlipFlop.vhd
+/home/lemon/Descomp/Relogio/ULASomaSub.vhd
+/home/lemon/Descomp/Relogio/Waveform.vwf
+/home/lemon/Descomp/Relogio/bancoRegistradoresArqRegMem.vhd
+/home/lemon/Descomp/Relogio/buffer_3_state_1porta.vhd
+/home/lemon/Descomp/Relogio/buffer_3_state_8portas.vhd
+/home/lemon/Descomp/Relogio/conversorHex7Seg.vhd
+/home/lemon/Descomp/Relogio/cpu.vhd
+/home/lemon/Descomp/Relogio/decoder3x8.vhd
+/home/lemon/Descomp/Relogio/decoderInstru.vhd
+/home/lemon/Descomp/Relogio/divisorGenerico.vhd
+/home/lemon/Descomp/Relogio/divisorGenerico_e_Interface.vhd
+/home/lemon/Descomp/Relogio/edgeDetector.vhd
+/home/lemon/Descomp/Relogio/logicaDesvio.vhd
+/home/lemon/Descomp/Relogio/memoriaRAM.vhd
+/home/lemon/Descomp/Relogio/memoriaROM.vhd
+/home/lemon/Descomp/Relogio/muxGenerico2x1.vhd
+/home/lemon/Descomp/Relogio/muxGenerico2x1OneBit.vhd
+/home/lemon/Descomp/Relogio/muxGenerico4x1.vhd
+/home/lemon/Descomp/Relogio/registradorGenerico.vhd
+/home/lemon/Descomp/Relogio/somaConstante.vhd
+/home/lemon/Descomp/Relogio/toplevel.qpf
+/home/lemon/Descomp/Relogio/toplevel.qsf
+/home/lemon/Descomp/Relogio/toplevel.vhd
+/home/lemon/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 25 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Oct 31 10:42:02 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Oct 31 10:43:53 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Oct 31 10:44:05 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Oct 31 10:47:02 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Thu Nov 09 10:38:16 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Thu Nov 09 11:46:19 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Thu Nov 09 11:51:04 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Thu Nov 09 13:35:30 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/PROJETO1/Projeto1Descomp-main/Projeto1Descomp-main/relogio_restored/
+		 - successfully.

@@ -1,0 +1,187 @@
+setup:
+LDI $0
+STA @288
+STA @289
+STA @290
+STA @291
+STA @292
+STA @293
+STA @256
+STA @257
+STA @258
+STA @511
+STA @510
+STA @0 #CONSTANTE 0
+STA @2 #ZERA O VALOR DO NUMERO DA UNIDADE, CENTENA, ETC.
+STA @3 
+STA @4 
+STA @5
+STA @6
+STA @7
+LDI $10
+STA @10 #LIMITE DA UNIDADE EM 10
+LDI $1
+STA @1 #CONSTANTE 1
+
+program_loop:
+LDA @356
+CEQ @1
+JEQ @setup
+
+LDA @322 #LE O SWITCH 9 
+CEQ @1
+JEQ @regressivo
+LDA @352 #LE O VALOR DO BOTAO DE INCREMENTO
+CEQ @0 #COMPARA SE O VALOR DE KEY 0 E 0
+JEQ @display
+JSR @i_unidade
+regressivo:
+LDA @352 #LE O VALOR DO BOTAO DE INCREMENTO
+CEQ @0 #COMPARA SE O VALOR DE KEY 0 E 0
+JEQ @display
+JSR @d_unidade
+
+display:
+LDA @2
+STA @288 #ESCREVE O VALOR NO DISPLAY HEX0
+LDA @3
+STA @289 #ESCREVE O VALOR NO DISPLAY HEX1
+LDA @4
+STA @290 #ESCREVE O VALOR NO DISPLAY HEX2
+LDA @5
+STA @291 #ESCREVE O VALOR NO DISPLAY HEX3
+LDA @6
+STA @292 #ESCREVE O VALOR NO DISPLAY HEX4
+LDA @7
+STA @293 #ESCREVE O VALOR NO DISPLAY HEX5
+
+JMP @program_loop
+
+
+i_unidade:
+STA @511
+LDA @2
+SOMA @1
+STA @2
+CEQ @10
+JEQ @i_dezena
+RET
+
+i_dezena:
+LDA @0 #ZERA A CASA DA UNIDADE
+STA @2
+LDA @3
+SOMA @1
+STA @3
+CEQ @10
+JEQ @i_centena
+RET
+
+i_centena:
+LDA @0 #ZERA A CASA DA DEZENA
+STA @3
+LDA @4
+SOMA @1
+STA @4
+CEQ @10
+JEQ @i_milhar
+RET
+
+i_milhar:
+LDA @0 #ZERA A CASA DA CENTENA
+STA @4
+LDA @5
+SOMA @1
+STA @5
+CEQ @10
+JEQ @i_dez_de_milh
+RET
+
+i_dez_de_milh:
+LDA @0 #ZERA A CASA DO MILHAR
+STA @5
+LDA @6
+SOMA @1
+STA @6
+CEQ @10
+JEQ @i_cent_de_milh
+RET
+
+i_cent_de_milh:
+LDA @0 #ZERA A CASA DO D. MILHAR
+STA @6
+LDA @7
+SOMA @1
+STA @7
+CEQ @10
+JEQ @setup
+RET
+
+
+
+d_unidade:
+STA @511
+LDA @2
+CEQ @0
+JEQ @d_dezena
+SUB @1
+STA @2
+RET
+
+d_dezena:
+LDI $9
+STA @2
+LDA @3
+CEQ @0
+JEQ @d_centena
+SUB @1
+STA @3
+RET
+
+d_centena:
+LDI $9
+STA @3
+LDA @4
+CEQ @0
+JEQ @d_milhar
+SUB @1
+STA @4
+RET
+
+
+d_milhar:
+LDI $9
+STA @4
+LDA @5
+CEQ @0
+JEQ @d_dezena_de_milhar
+SUB @1
+STA @5
+RET
+
+
+d_dezena_de_milhar:
+LDI $9
+STA @5
+LDA @6
+CEQ @0
+JEQ @d_centena_de_milhar
+SUB @1
+STA @6
+RET
+
+
+d_centena_de_milhar:
+LDI $9
+STA @6
+LDA @7
+CEQ @0
+JEQ @d_overflow
+SUB @1
+STA @7
+RET
+
+d_overflow:
+LDI $9
+STA @7
+RET

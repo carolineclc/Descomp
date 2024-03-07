@@ -1,0 +1,33 @@
+Quartus Prime Archive log --	/home/lemon/contador/AULA8/Contador.qarlog
+
+Archive:	/home/lemon/contador/AULA8/Contador.qar
+Date:		Tue Oct 24 19:42:23 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/lemon/contador/AULA8/FlipFlop.vhd
+/home/lemon/contador/AULA8/ULASomaSub.vhd
+/home/lemon/contador/AULA8/Waveform.vwf
+/home/lemon/contador/AULA8/Waveform1.vwf
+/home/lemon/contador/AULA8/buffer_3_state_1porta.vhd
+/home/lemon/contador/AULA8/buffer_3_state_8portas.vhd
+/home/lemon/contador/AULA8/conversorHex7Seg.vhd
+/home/lemon/contador/AULA8/cpu.vhd
+/home/lemon/contador/AULA8/decoder3x8.vhd
+/home/lemon/contador/AULA8/decoderInstru.vhd
+/home/lemon/contador/AULA8/edgeDetector.vhd
+/home/lemon/contador/AULA8/logicaDesvio.vhd
+/home/lemon/contador/AULA8/memoriaRAM.vhd
+/home/lemon/contador/AULA8/memoriaROM.vhd
+/home/lemon/contador/AULA8/muxGenerico2x1.vhd
+/home/lemon/contador/AULA8/muxGenerico4x1.vhd
+/home/lemon/contador/AULA8/registradorGenerico.vhd
+/home/lemon/contador/AULA8/somaConstante.vhd
+/home/lemon/contador/AULA8/toplevel.qpf
+/home/lemon/contador/AULA8/toplevel.qsf
+/home/lemon/contador/AULA8/toplevel.vhd
+/home/lemon/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 22 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

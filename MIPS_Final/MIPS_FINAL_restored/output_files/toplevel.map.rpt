@@ -1,0 +1,1374 @@
+Analysis & Synthesis report for toplevel
+Tue Dec 12 10:48:47 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |toplevel
+ 11. Parameter Settings for User Entity Instance: registradorGenerico:PC
+ 12. Parameter Settings for User Entity Instance: ROMMIPS:ROM
+ 13. Parameter Settings for User Entity Instance: somaConstante:incrementaPC
+ 14. Parameter Settings for User Entity Instance: somadorGenerico:SOMADOR_BRANCH
+ 15. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_BEQ_PCm4
+ 16. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_JMP_BEQ
+ 17. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_JMP_BEQ_JR
+ 18. Parameter Settings for User Entity Instance: muxGenerico4x1:MUX_RT_RD
+ 19. Parameter Settings for User Entity Instance: bancoReg:BancoReg
+ 20. Parameter Settings for User Entity Instance: extensaoDeSinal:EXT_SIGNAL
+ 21. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_ENTRADA_ULA
+ 22. Parameter Settings for User Entity Instance: ULASomaSub:ULA
+ 23. Parameter Settings for User Entity Instance: ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut
+ 24. Parameter Settings for User Entity Instance: memoriaRAM:MEMORIA_RAM
+ 25. Parameter Settings for User Entity Instance: muxGenerico4x1:MUX_DATA_IN_BANCO_REG
+ 26. Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_LEDS
+ 27. Port Connectivity Checks: "conversorHex7Seg:DEC_H5"
+ 28. Port Connectivity Checks: "conversorHex7Seg:DEC_H4"
+ 29. Port Connectivity Checks: "conversorHex7Seg:DEC_H3"
+ 30. Port Connectivity Checks: "conversorHex7Seg:DEC_H2"
+ 31. Port Connectivity Checks: "conversorHex7Seg:DEC_H1"
+ 32. Port Connectivity Checks: "conversorHex7Seg:DEC_H0"
+ 33. Port Connectivity Checks: "muxGenerico4x1:MUX_DATA_IN_BANCO_REG"
+ 34. Port Connectivity Checks: "memoriaRAM:MEMORIA_RAM"
+ 35. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30"
+ 36. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29"
+ 37. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28"
+ 38. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27"
+ 39. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT26"
+ 40. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25"
+ 41. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24"
+ 42. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23"
+ 43. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22"
+ 44. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT21"
+ 45. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20"
+ 46. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19"
+ 47. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18"
+ 48. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17"
+ 49. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16"
+ 50. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15"
+ 51. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14"
+ 52. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13"
+ 53. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12"
+ 54. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11"
+ 55. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10"
+ 56. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9"
+ 57. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8"
+ 58. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7"
+ 59. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6"
+ 60. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5"
+ 61. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4"
+ 62. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3"
+ 63. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2"
+ 64. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1"
+ 65. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31"
+ 66. Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0"
+ 67. Port Connectivity Checks: "muxGenerico4x1:MUX_RT_RD"
+ 68. Port Connectivity Checks: "shiftLeft2:SHIFT_LEFT_IMEDIATO_JMP"
+ 69. Port Connectivity Checks: "registradorGenerico:PC"
+ 70. Post-Synthesis Netlist Statistics for Top Partition
+ 71. Elapsed Time Per Partition
+ 72. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Dec 12 10:48:47 2023       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; toplevel                                    ;
+; Top-level Entity Name           ; toplevel                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 1120                                        ;
+; Total pins                      ; 70                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; toplevel           ; toplevel           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; VHDL Show LMF Mapping Messages                                                  ; Off                ;                    ;
+; VHDL Version                                                                    ; VHDL_2008          ; VHDL_1993          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 14          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 14          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processors 6-14        ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; shifter.vhd                      ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/shifter.vhd                 ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/bancoRegistradores.vhd      ;         ;
+; UcULA.vhd                        ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UcULA.vhd                   ;         ;
+; shiftLeftExtSig.vhd              ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/shiftLeftExtSig.vhd         ;         ;
+; ULASomaSub.vhd                   ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ULASomaSub.vhd              ;         ;
+; decoderOpcodeMips.vhd            ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/decoderOpcodeMips.vhd       ;         ;
+; muxGenerico4x1.vhd               ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico4x1.vhd          ;         ;
+; extensaoDeSinal.vhd              ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/extensaoDeSinal.vhd         ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico2x1.vhd          ;         ;
+; somadorGenerico.vhd              ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somadorGenerico.vhd         ;         ;
+; UlaSingleBit.vhd                 ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UlaSingleBit.vhd            ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/registradorGenerico.vhd     ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somaConstante.vhd           ;         ;
+; memoriaRam.vhd                   ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd              ;         ;
+; somadorSingleBit.vhd             ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somadorSingleBit.vhd        ;         ;
+; ROMMips.vhd                      ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMMips.vhd                 ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/conversorHex7Seg.vhd        ;         ;
+; toplevel.vhd                     ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd                ;         ;
+; muxGenerico2x1SingleBit.vhd      ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico2x1SingleBit.vhd ;         ;
+; muxGenerico4x1SingleBit.vhd      ; yes             ; User VHDL File  ; C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico4x1SingleBit.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 1137         ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 1206         ;
+;     -- 7 input functions                    ; 278          ;
+;     -- 6 input functions                    ; 440          ;
+;     -- 5 input functions                    ; 130          ;
+;     -- 4 input functions                    ; 144          ;
+;     -- <=3 input functions                  ; 214          ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 1120         ;
+;                                             ;              ;
+; I/O pins                                    ; 70           ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; KEY[0]~input ;
+; Maximum fan-out                             ; 1120         ;
+; Total fan-out                               ; 9772         ;
+; Average fan-out                             ; 3.96         ;
++---------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------+-------------------------+--------------+
+; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Entity Name             ; Library Name ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------+-------------------------+--------------+
+; |toplevel                                        ; 1206 (3)            ; 1120 (0)                  ; 0                 ; 0          ; 70   ; 0            ; |toplevel                                                                                       ; toplevel                ; work         ;
+;    |ROMMIPS:ROM|                                 ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ROMMIPS:ROM                                                                           ; ROMMIPS                 ; work         ;
+;    |UC_ULA:UC_ULA|                               ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|UC_ULA:UC_ULA                                                                         ; UC_ULA                  ; work         ;
+;    |ULASomaSub:ULA|                              ; 357 (9)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA                                                                        ; ULASomaSub              ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT0|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT10|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT11|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT12|         ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT13|         ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT14|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT15|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT16|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT17|         ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT18|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT19|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT1|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT20|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT21|         ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT21                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT21|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT21|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT21|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT21|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT22|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT23|         ; 8 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT24|         ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT25|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT26|         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT26                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT26|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT26|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT26|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT26|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT27|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT28|         ; 8 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT29|         ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT2|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT30|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|muxGenerico2x1SingleBit:MUX_INVERTE_A ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT31|         ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31                                       ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|muxGenerico2x1SingleBit:MUX_INVERTE_B ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|muxGenerico4x1SingleBit:MUX_SELETOR   ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31|somadorSingleBit:SOMADOR              ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT3|          ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT4|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT5|          ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT6|          ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT7|          ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT8|          ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;          |somadorSingleBit:SOMADOR|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8|somadorSingleBit:SOMADOR               ; somadorSingleBit        ; work         ;
+;       |UlaSingleBit:ULA_SINGLEBIT_BIT9|          ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9                                        ; UlaSingleBit            ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_A| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|muxGenerico2x1SingleBit:MUX_INVERTE_A  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico2x1SingleBit:MUX_INVERTE_B| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|muxGenerico2x1SingleBit:MUX_INVERTE_B  ; muxGenerico2x1SingleBit ; work         ;
+;          |muxGenerico4x1SingleBit:MUX_SELETOR|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9|muxGenerico4x1SingleBit:MUX_SELETOR    ; muxGenerico4x1SingleBit ; work         ;
+;       |muxGenerico2x1:MUXUlaOut|                 ; 100 (100)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut                                               ; muxGenerico2x1          ; work         ;
+;       |shifter32:ULAShifter|                     ; 81 (81)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter                                                   ; shifter32               ; work         ;
+;    |bancoReg:BancoReg|                           ; 552 (552)           ; 1024 (1024)               ; 0                 ; 0          ; 0    ; 0            ; |toplevel|bancoReg:BancoReg                                                                     ; bancoReg                ; work         ;
+;    |conversorHex7Seg:DEC_H0|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H0                                                               ; conversorHex7Seg        ; work         ;
+;    |conversorHex7Seg:DEC_H1|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H1                                                               ; conversorHex7Seg        ; work         ;
+;    |conversorHex7Seg:DEC_H2|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H2                                                               ; conversorHex7Seg        ; work         ;
+;    |conversorHex7Seg:DEC_H3|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H3                                                               ; conversorHex7Seg        ; work         ;
+;    |conversorHex7Seg:DEC_H4|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H4                                                               ; conversorHex7Seg        ; work         ;
+;    |conversorHex7Seg:DEC_H5|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|conversorHex7Seg:DEC_H5                                                               ; conversorHex7Seg        ; work         ;
+;    |memoriaRAM:MEMORIA_RAM|                      ; 19 (19)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|memoriaRAM:MEMORIA_RAM                                                                ; memoriaRAM              ; work         ;
+;    |muxGenerico2x1:MUX_ENTRADA_ULA|              ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_ENTRADA_ULA                                                        ; muxGenerico2x1          ; work         ;
+;    |muxGenerico2x1:MUX_JMP_BEQ_JR|               ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_JMP_BEQ_JR                                                         ; muxGenerico2x1          ; work         ;
+;    |muxGenerico2x1:MUX_LEDS|                     ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico2x1:MUX_LEDS                                                               ; muxGenerico2x1          ; work         ;
+;    |muxGenerico4x1:MUX_DATA_IN_BANCO_REG|        ; 48 (48)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG                                                  ; muxGenerico4x1          ; work         ;
+;    |muxGenerico4x1:MUX_RT_RD|                    ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|muxGenerico4x1:MUX_RT_RD                                                              ; muxGenerico4x1          ; work         ;
+;    |registradorGenerico:PC|                      ; 3 (3)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |toplevel|registradorGenerico:PC                                                                ; registradorGenerico     ; work         ;
+;    |somaConstante:incrementaPC|                  ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|somaConstante:incrementaPC                                                            ; somaConstante           ; work         ;
+;    |somadorGenerico:SOMADOR_BRANCH|              ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|somadorGenerico:SOMADOR_BRANCH                                                        ; somadorGenerico         ; work         ;
+;    |unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS                                            ; unidadeDeControle       ; work         ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------+-------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1120  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1090  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[1]                                                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[31]                                                                 ;
+; 4:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; Yes        ; |toplevel|registradorGenerico:PC|DOUT[23]                                                                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[0]                                             ;
+; 4:1                ; 27 bits   ; 54 LEs        ; 54 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23|muxGenerico2x1SingleBit:MUX_INVERTE_B|saida_MUX ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftLeft0                                                  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftLeft0                                                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftRight0                                                 ;
+; 4:1                ; 50 bits   ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|shifter32:ULAShifter|ShiftLeft0                                                  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG|saida_MUX[10]                                              ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_DATA_IN_BANCO_REG|saida_MUX[27]                                              ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|muxGenerico4x1:MUX_RT_RD|saida_MUX[1]                                                           ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12|muxGenerico4x1SingleBit:MUX_SELETOR|saida_MUX   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[3]                                             ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[27]                                           ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[8]                                            ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[31]                                           ;
+; 11:1               ; 4 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |toplevel|ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut|saida_MUX[0]                                            ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |toplevel|unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS|saida[10]                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |toplevel ;
++------------------+-------+-----------------------------------------------+
+; Parameter Name   ; Value ; Type                                          ;
++------------------+-------+-----------------------------------------------+
+; larguraDados     ; 32    ; Signed Integer                                ;
+; larguraEnderecos ; 32    ; Signed Integer                                ;
+; simulacao        ; false ; Enumerated                                    ;
++------------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: registradorGenerico:PC ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROMMIPS:ROM ;
++-----------------+-------+--------------------------------+
+; Parameter Name  ; Value ; Type                           ;
++-----------------+-------+--------------------------------+
+; datawidth       ; 32    ; Signed Integer                 ;
+; addrwidth       ; 32    ; Signed Integer                 ;
+; memoryaddrwidth ; 6     ; Signed Integer                 ;
++-----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somaConstante:incrementaPC ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
+; constante      ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: somadorGenerico:SOMADOR_BRANCH ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_BEQ_PCm4 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_JMP_BEQ ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_JMP_BEQ_JR ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico4x1:MUX_RT_RD ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; larguraentrada ; 5     ; Signed Integer                               ;
+; larguraselecao ; 2     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bancoReg:BancoReg ;
++---------------------+-------+----------------------------------+
+; Parameter Name      ; Value ; Type                             ;
++---------------------+-------+----------------------------------+
+; larguradados        ; 32    ; Signed Integer                   ;
+; larguraendbancoregs ; 5     ; Signed Integer                   ;
++---------------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: extensaoDeSinal:EXT_SIGNAL ;
++--------------------+-------+--------------------------------------------+
+; Parameter Name     ; Value ; Type                                       ;
++--------------------+-------+--------------------------------------------+
+; larguradadoentrada ; 16    ; Signed Integer                             ;
+; larguradadosaida   ; 32    ; Signed Integer                             ;
++--------------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_ENTRADA_ULA ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULASomaSub:ULA ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; larguradados   ; 32    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ULASomaSub:ULA|muxGenerico2x1:MUXUlaOut ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: memoriaRAM:MEMORIA_RAM ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; datawidth      ; 32    ; Signed Integer                             ;
+; addrwidth      ; 32    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico4x1:MUX_DATA_IN_BANCO_REG ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; larguraentrada ; 32    ; Signed Integer                                           ;
+; larguraselecao ; 2     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxGenerico2x1:MUX_LEDS ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DEC_H5" ;
++----------+-------+----------+-----------------------+
+; Port     ; Type  ; Severity ; Details               ;
++----------+-------+----------+-----------------------+
+; apaga    ; Input ; Info     ; Stuck at GND          ;
+; negativo ; Input ; Info     ; Stuck at GND          ;
+; overflow ; Input ; Info     ; Stuck at GND          ;
++----------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DEC_H4" ;
++----------+-------+----------+-----------------------+
+; Port     ; Type  ; Severity ; Details               ;
++----------+-------+----------+-----------------------+
+; apaga    ; Input ; Info     ; Stuck at GND          ;
+; negativo ; Input ; Info     ; Stuck at GND          ;
+; overflow ; Input ; Info     ; Stuck at GND          ;
++----------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DEC_H3" ;
++----------+-------+----------+-----------------------+
+; Port     ; Type  ; Severity ; Details               ;
++----------+-------+----------+-----------------------+
+; apaga    ; Input ; Info     ; Stuck at GND          ;
+; negativo ; Input ; Info     ; Stuck at GND          ;
+; overflow ; Input ; Info     ; Stuck at GND          ;
++----------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DEC_H2" ;
++----------+-------+----------+-----------------------+
+; Port     ; Type  ; Severity ; Details               ;
++----------+-------+----------+-----------------------+
+; apaga    ; Input ; Info     ; Stuck at GND          ;
+; negativo ; Input ; Info     ; Stuck at GND          ;
+; overflow ; Input ; Info     ; Stuck at GND          ;
++----------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DEC_H1" ;
++----------+-------+----------+-----------------------+
+; Port     ; Type  ; Severity ; Details               ;
++----------+-------+----------+-----------------------+
+; apaga    ; Input ; Info     ; Stuck at GND          ;
+; negativo ; Input ; Info     ; Stuck at GND          ;
+; overflow ; Input ; Info     ; Stuck at GND          ;
++----------+-------+----------+-----------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "conversorHex7Seg:DEC_H0" ;
++----------+-------+----------+-----------------------+
+; Port     ; Type  ; Severity ; Details               ;
++----------+-------+----------+-----------------------+
+; apaga    ; Input ; Info     ; Stuck at GND          ;
+; negativo ; Input ; Info     ; Stuck at GND          ;
+; overflow ; Input ; Info     ; Stuck at GND          ;
++----------+-------+----------+-----------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "muxGenerico4x1:MUX_DATA_IN_BANCO_REG" ;
++---------------------+-------+----------+-------------------------+
+; Port                ; Type  ; Severity ; Details                 ;
++---------------------+-------+----------+-------------------------+
+; entradac_mux[15..0] ; Input ; Info     ; Stuck at GND            ;
++---------------------+-------+----------+-------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "memoriaRAM:MEMORIA_RAM" ;
++----------+-------+----------+----------------------+
+; Port     ; Type  ; Severity ; Details              ;
++----------+-------+----------+----------------------+
+; habilita ; Input ; Info     ; Stuck at VCC         ;
++----------+-------+----------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT30"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT29"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT28"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT27"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT26"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT25"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT24"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT23"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT22"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT21"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT20"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT19"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT18"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT17"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT16"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT15"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT14"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT13"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT12"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT11"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT10"                                          ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT9"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT8"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT7"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT6"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT5"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT4"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT3"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT2"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT1"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; slt        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT31"                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; slt  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0"                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; saida_soma ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "muxGenerico4x1:MUX_RT_RD" ;
++--------------+-------+----------+--------------------+
+; Port         ; Type  ; Severity ; Details            ;
++--------------+-------+----------+--------------------+
+; entradac_mux ; Input ; Info     ; Stuck at VCC       ;
+; entradad_mux ; Input ; Info     ; Stuck at GND       ;
++--------------+-------+----------+--------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "shiftLeft2:SHIFT_LEFT_IMEDIATO_JMP"                                                            ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; entrada[31..26] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; saida[31..28]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "registradorGenerico:PC" ;
++--------+-------+----------+------------------------+
+; Port   ; Type  ; Severity ; Details                ;
++--------+-------+----------+------------------------+
+; enable ; Input ; Info     ; Stuck at VCC           ;
+; rst    ; Input ; Info     ; Stuck at GND           ;
++--------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 1120                        ;
+;     ENA               ; 1090                        ;
+;     plain             ; 30                          ;
+; arriav_lcell_comb     ; 1207                        ;
+;     arith             ; 60                          ;
+;         1 data inputs ; 30                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 29                          ;
+;     extend            ; 278                         ;
+;         7 data inputs ; 278                         ;
+;     normal            ; 869                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 104                         ;
+;         3 data inputs ; 66                          ;
+;         4 data inputs ; 115                         ;
+;         5 data inputs ; 130                         ;
+;         6 data inputs ; 440                         ;
+; boundary_port         ; 70                          ;
+;                       ;                             ;
+; Max LUT depth         ; 21.00                       ;
+; Average LUT depth     ; 13.73                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Dec 12 10:48:37 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off toplevel -c toplevel
+Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file shifter.vhd
+    Info (12022): Found design unit 1: shifter32-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/shifter.vhd Line: 18
+    Info (12023): Found entity 1: shifter32 File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/shifter.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
+    Info (12022): Found design unit 1: bancoReg-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/bancoRegistradores.vhd Line: 30
+    Info (12023): Found entity 1: bancoReg File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/bancoRegistradores.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file ucula.vhd
+    Info (12022): Found design unit 1: UC_ULA-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UcULA.vhd Line: 14
+    Info (12023): Found entity 1: UC_ULA File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UcULA.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file shiftleftextsig.vhd
+    Info (12022): Found design unit 1: shiftLeft2-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/shiftLeftExtSig.vhd Line: 12
+    Info (12023): Found entity 1: shiftLeft2 File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/shiftLeftExtSig.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ulasomasub.vhd
+    Info (12022): Found design unit 1: ULASomaSub-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ULASomaSub.vhd Line: 16
+    Info (12023): Found entity 1: ULASomaSub File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ULASomaSub.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decoderopcodemips.vhd
+    Info (12022): Found design unit 1: unidadeDeControle-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/decoderOpcodeMips.vhd Line: 10
+    Info (12023): Found entity 1: unidadeDeControle File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/decoderOpcodeMips.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x1.vhd
+    Info (12022): Found design unit 1: muxGenerico4x1-Behavioral File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico4x1.vhd Line: 15
+    Info (12023): Found entity 1: muxGenerico4x1 File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico4x1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file extensaodesinal.vhd
+    Info (12022): Found design unit 1: extensaoDeSinal-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/extensaoDeSinal.vhd Line: 19
+    Info (12023): Found entity 1: extensaoDeSinal File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/extensaoDeSinal.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico2x1.vhd Line: 14
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file somadorgenerico.vhd
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somadorGenerico.vhd Line: 17
+    Info (12023): Found entity 1: somadorGenerico File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somadorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ulasinglebit.vhd
+    Info (12022): Found design unit 1: UlaSingleBit-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UlaSingleBit.vhd Line: 18
+    Info (12023): Found entity 1: UlaSingleBit File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UlaSingleBit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/registradorGenerico.vhd Line: 16
+    Info (12023): Found entity 1: registradorGenerico File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/registradorGenerico.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somaConstante.vhd Line: 18
+    Info (12023): Found entity 1: somaConstante File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somaConstante.vhd Line: 5
+Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/edgeDetector.vhd Line: 10
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/edgeDetector.vhd Line: 23
+    Info (12023): Found entity 1: edgeDetector File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/edgeDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 21
+    Info (12023): Found entity 1: memoriaRAM File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregreg.vhd
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/bancoRegistradoresArqRegReg.vhd Line: 30
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/bancoRegistradoresArqRegReg.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file somadorsinglebit.vhd
+    Info (12022): Found design unit 1: somadorSingleBit-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somadorSingleBit.vhd Line: 12
+    Info (12023): Found entity 1: somadorSingleBit File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/somadorSingleBit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file rommips.vhd
+    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMMips.vhd Line: 15
+    Info (12023): Found entity 1: ROMMIPS File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMMips.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file toplevel.vhd
+    Info (12022): Found design unit 1: toplevel-arquitetura File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 28
+    Info (12023): Found entity 1: toplevel File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1singlebit.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1SingleBit-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico2x1SingleBit.vhd Line: 13
+    Info (12023): Found entity 1: muxGenerico2x1SingleBit File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico2x1SingleBit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico4x1singlebit.vhd
+    Info (12022): Found design unit 1: muxGenerico4x1SingleBit-comportamento File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico4x1SingleBit.vhd Line: 13
+    Info (12023): Found entity 1: muxGenerico4x1SingleBit File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/muxGenerico4x1SingleBit.vhd Line: 4
+Info (12127): Elaborating entity "toplevel" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(21): used implicit default value for signal "entrada" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 21
+Warning (10541): VHDL Signal Declaration warning at toplevel.vhd(22): used implicit default value for signal "saida" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 22
+Critical Warning (10920): VHDL Incomplete Partial Association warning at toplevel.vhd(153): port or argument "saida" has 4/32 unassociated elements File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 153
+Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at toplevel.vhd(13) File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 13
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "registradorGenerico:PC" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 110
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "ROMMIPS:ROM" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 113
+Warning (10541): VHDL Signal Declaration warning at ROMMips.vhd(18): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMMips.vhd Line: 18
+Info (12128): Elaborating entity "somaConstante" for hierarchy "somaConstante:incrementaPC" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 118
+Info (12128): Elaborating entity "shiftLeft2" for hierarchy "shiftLeft2:SHIFT_LEFT_SIG_EXT" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 123
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "somadorGenerico:SOMADOR_BRANCH" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 129
+Info (12128): Elaborating entity "muxGenerico2x1SingleBit" for hierarchy "muxGenerico2x1SingleBit:MUX_BEQ_BNE" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 136
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "muxGenerico2x1:MUX_BEQ_PCm4" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 145
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "muxGenerico4x1:MUX_RT_RD" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 186
+Info (12128): Elaborating entity "bancoReg" for hierarchy "bancoReg:BancoReg" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 197
+Info (12128): Elaborating entity "extensaoDeSinal" for hierarchy "extensaoDeSinal:EXT_SIGNAL" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 211
+Info (12128): Elaborating entity "unidadeDeControle" for hierarchy "unidadeDeControle:UNIDADE_DE_CONTROLE_MIPS" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 232
+Info (12128): Elaborating entity "UC_ULA" for hierarchy "UC_ULA:UC_ULA" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 238
+Info (12128): Elaborating entity "ULASomaSub" for hierarchy "ULASomaSub:ULA" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 257
+Info (12128): Elaborating entity "shifter32" for hierarchy "ULASomaSub:ULA|shifter32:ULAShifter" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ULASomaSub.vhd Line: 72
+Info (12128): Elaborating entity "UlaSingleBit" for hierarchy "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ULASomaSub.vhd Line: 121
+Warning (10541): VHDL Signal Declaration warning at UlaSingleBit.vhd(14): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UlaSingleBit.vhd Line: 14
+Info (12128): Elaborating entity "somadorSingleBit" for hierarchy "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|somadorSingleBit:SOMADOR" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UlaSingleBit.vhd Line: 41
+Info (12128): Elaborating entity "muxGenerico4x1SingleBit" for hierarchy "ULASomaSub:ULA|UlaSingleBit:ULA_SINGLEBIT_BIT0|muxGenerico4x1SingleBit:MUX_SELETOR" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/UlaSingleBit.vhd Line: 50
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:MEMORIA_RAM" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 267
+Warning (10639): VHDL warning at memoriaRam.vhd(24): constant value overflow File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 24
+Warning (10445): VHDL Subtype or Type Declaration warning at memoriaRam.vhd(24): subtype or type has null range File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 24
+Info (12128): Elaborating entity "muxGenerico4x1" for hierarchy "muxGenerico4x1:MUX_DATA_IN_BANCO_REG" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 278
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:DEC_H0" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 298
+Info (276014): Found 3 instances of uninferred RAM logic
+    Info (276007): RAM logic "memoriaRAM:MEMORIA_RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 27
+    Info (276007): RAM logic "bancoReg:BancoReg|registrador" is uninferred due to asynchronous read logic File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/bancoRegistradores.vhd Line: 50
+    Info (276004): RAM logic "ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMMips.vhd Line: 18
+Warning (113028): 46 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMContent.mif Line: 1
+    Warning (113026): Memory Initialization File Address 16 is not initialized File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMContent.mif Line: 1
+    Warning (113027): Addresses ranging from 18 to 30 are not initialized File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMContent.mif Line: 1
+    Warning (113027): Addresses ranging from 32 to 63 are not initialized File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/ROMContent.mif Line: 1
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[15]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[14]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[13]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[12]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[11]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[10]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[9]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[8]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[7]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[6]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[5]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[4]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[3]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[2]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[1]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[0]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[16]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[17]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[18]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[19]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[20]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[21]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[22]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[23]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[24]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[25]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[26]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[27]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[28]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[29]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[30]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+    Warning (13049): Converted tri-state buffer "memoriaRAM:MEMORIA_RAM|dado_out[31]" feeding internal logic into a wire File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/memoriaRam.vhd Line: 17
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 13
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 13
+    Warning (13410): Pin "entrada" is stuck at GND File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 21
+    Warning (13410): Pin "saida" is stuck at GND File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 22
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 11
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 11
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 11
+    Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 12
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/toplevel.vhd Line: 20
+Info (21057): Implemented 2351 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 54 output pins
+    Info (21061): Implemented 2281 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4921 megabytes
+    Info: Processing ended: Tue Dec 12 10:48:47 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:04
+
+

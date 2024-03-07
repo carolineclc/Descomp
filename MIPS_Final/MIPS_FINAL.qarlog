@@ -1,0 +1,55 @@
+Quartus Prime Archive log --	/home/lemon/Descomp/MIPS_Intermediaria/MIPS_FINAL.qarlog
+
+Archive:	/home/lemon/Descomp/MIPS_Intermediaria/MIPS_FINAL.qar
+Date:		Thu Dec  7 13:56:20 2023
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/lemon/Descomp/MIPS_Intermediaria/ROMContent.mif
+/home/lemon/Descomp/MIPS_Intermediaria/ROMMips.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/ULASomaSub.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/UcULA.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/UlaSingleBit.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/bancoRegistradores.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/bancoRegistradoresArqRegReg.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/conversorHex7Seg.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/decoderOpcodeMips.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/edgeDetector.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/extensaoDeSinal.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/memoriaRam.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/muxGenerico2x1.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/muxGenerico2x1SingleBit.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/muxGenerico4x1.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/muxGenerico4x1SingleBit.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/registradorGenerico.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/shiftLeftExtSig.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/shifter.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/somaConstante.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/somadorGenerico.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/somadorSingleBit.vhd
+/home/lemon/Descomp/MIPS_Intermediaria/toplevel.qpf
+/home/lemon/Descomp/MIPS_Intermediaria/toplevel.qsf
+/home/lemon/Descomp/MIPS_Intermediaria/toplevel.vhd
+/home/lemon/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 26 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon Dec 11 13:30:01 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Dec 12 02:01:35 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Dec 12 03:27:26 2023
+Source archive file:	C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL.qar
+Archive was extracted into	C:/Users/carol/Documents/Insper/6Semestre/Descomp/MIPS_Final/MIPS_FINAL_restored/
+		 - successfully.

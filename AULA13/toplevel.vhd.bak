@@ -1,0 +1,43 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity TopLevel is
+  -- Total de bits das entradas e saidas
+  generic ( 
+
+		simulacao 			: boolean := FALSE -- para gravar na placa, altere de TRUE para FALSE
+  );
+  port   (
+    CLOCK_50 : 	in std_logic;
+	DATA_OUT:	out std_logic_vector(larguraDados-1 downto 0);
+	KEY:		in	std_logic_vector(3 downto 0);
+
+
+  );
+end entity;
+
+
+architecture arquitetura of TopLevel is
+-- ## DECLARANDO SINAIS:
+
+	signal CLK	:					std_logic;
+	-- PC e incrementador
+
+
+begin
+	
+-- Para simular, fica mais simples tirar o edgeDetector
+gravar:  if simulacao generate
+CLK <= KEY(0);
+else generate
+-- detectorSub0: work.edgeDetector(bordaSubida)
+--         port map (clk => CLOCK_50, entrada => (not KEY(1)), saida => CLK);  
+CLK <= CLOCK_50;
+
+end generate;
+
+
+
+
+
+end architecture;

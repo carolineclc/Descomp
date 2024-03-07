@@ -1,0 +1,287 @@
+setup:
+LDI $0
+STA @288
+STA @289
+STA @290
+STA @291
+STA @292
+STA @293
+STA @256
+STA @257
+STA @258
+STA @511
+STA @510
+STA @0 #CONSTANTE 0
+STA @2 #ZERA O VALOR DO NUMERO DA UNIDADE, CENTENA, ETC.
+STA @3 
+STA @4 
+STA @5
+STA @6
+STA @7
+LDI $10
+STA @10 #LIMITE DA UNIDADE EM 10
+LDI $6
+STA @11 #LIMITE DA UNIDADE EM 6
+LDI $2
+STA @12 #LIMITE DA UNIDADE EM 2
+LDI $4
+STA @13 #LIMITE DA UNIDADE EM 4
+LDI $1
+STA @1 #CONSTANTE 1
+
+
+program_loop:
+LDA @356
+CEQ @1
+JEQ @setup
+
+LDA @320
+CEQ @1
+JEQ @cont_regressiva
+
+
+LDA @352
+CEQ @0
+JEQ @NAO_AJUSTA_MIN #LE O KEY 0. SE ATIVO, NAO PULA CHAMADA DE FUNCAO DE AJUSTE DE MIN
+JSR @ajuste_minutos
+
+
+NAO_AJUSTA_MIN:
+LDA @353
+CEQ @0
+JEQ @NAO_AJUSTA_HR #LE O KEY 1. SE ATIVO, NAO PULA CHAMADA DE FUNCAO DE AJUSTE DE HR
+JSR @ajuste_horas
+
+NAO_AJUSTA_HR:
+LDA @385 #LE O VALOR DO RELOGIO
+CEQ @0 #COMPARA SE O VALOR DO RELOGIO E 0
+JEQ @display #SE SIM APENAS ATUALIZA
+JSR @i_sec1 #SE NAO, ROTINA DE INCREMENTO
+
+display:
+LDA @2
+STA @288 #ESCREVE O VALOR NO DISPLAY HEX0
+LDA @3
+STA @289 #ESCREVE O VALOR NO DISPLAY HEX1
+LDA @4
+STA @290 #ESCREVE O VALOR NO DISPLAY HEX2
+LDA @5
+STA @291 #ESCREVE O VALOR NO DISPLAY HEX3
+LDA @6
+STA @292 #ESCREVE O VALOR NO DISPLAY HEX4
+LDA @7
+STA @293 #ESCREVE O VALOR NO DISPLAY HEX5
+
+JMP @program_loop
+
+
+i_sec1:
+LDI R0 $0
+STA R0 @258
+STA @387 
+LDA @2
+LDA R3 @0
+ADDI $1
+STA @2
+CEQ @10
+JEQ @i_sec2 #Verificacao de overflow da unidade 1 dos segundos.
+RET
+
+i_sec2:
+STA R3 @2
+LDA @3
+ADDI $1
+STA @3
+CEQ @11
+JEQ @i_min1 #Verificacao de overflow da segunda casa dos segundos.
+RET
+
+i_min1:
+STA R3 @3
+i_min_ajuste:
+LDA @4
+ADDI $1
+STA @4
+CEQ @10
+JEQ @i_min2 #Verificacao de overflow da primeira casa dos minutos.
+RET
+
+i_min2:
+STA R3 @4
+LDA @5
+ADDI $1
+STA @5
+CEQ @11
+JEQ @i_hora1 #Verificacao de overflow da segunda casa dos minutos.
+RET
+
+i_hora1:
+STA R3 @5
+i_hora_ajuste:
+LDA @6
+ADDI $1
+STA @6
+LDA R1 @7 #verifica se a segunda casa da hora eh 2. Se sim, verifica se a primeira eh 4
+CEQ R1 @12
+JEQ @verif_24h
+CEQ @10
+JEQ @i_hora2 #Verificacao de overflow da primeira casa das horas.
+RET
+
+i_hora2:
+STA R3 @6
+LDA @7
+ADDI @1
+STA @7
+RET
+
+verif_24h:
+LDA @6
+CEQ @13
+JEQ @setup #Se a segunda casa da hora eh 2 e a primeira eh 4, zera
+RET
+
+ajuste_minutos:
+STA @511
+LDA R1 @322
+CEQ R1 @0
+JEQ @i_min_ajuste
+JMP @d_min1
+
+d_min1:
+LDA R0 @4
+CEQ R0 @0
+JEQ @d_min2 #se tenta subtrair quando zero, subtrai na proxima unidade
+SUBI R0 $1
+STA R0 @4
+RET
+
+d_min2:
+LDI $9 #muda a ultima unidade para 9
+STA @4
+LDA R0 @5
+CEQ R0 @0
+JEQ @d_over_min #se tenta subtrair quando zero, vai para tratamento especial
+SUBI R0 $1
+STA R0 @5
+RET
+
+d_over_min:
+LDI R0 $5
+STA R0 @5 #transforma em 5
+LDI R0 $9
+STA R0 @4 #transforma em 9 e retorna
+RET
+
+
+ajuste_horas:
+STA @510 # para as horas, faz o mesmo tratamento que os minutos, so que agora para a casa das horas
+LDA R1 @322
+CEQ R1 @0
+JEQ @i_hora_ajuste
+JMP @d_hora1
+
+d_hora1:
+LDA R0 @6
+CEQ R0 @0
+JEQ R0 @d_hora2 #se tenta subtrair quando zero, subtrai na proxima unidade
+SUBI R0 $1
+STA R0 @6
+RET
+
+d_hora2:
+LDI R0 $9 #muda a ultima unidade para 9
+STA R0 @6
+LDA R0 @7
+CEQ R0 @0
+JEQ @d_over_hora #se tenta subtrair quando zero, vai para tratamento especial
+SUBI R0 $1
+STA R0 @7
+RET
+
+d_over_hora:
+LDI $2
+STA @7 #transforma em 2
+LDI $3
+STA @6 #transforma em 4 e retorna
+RET
+
+cont_regressiva:
+LDA @385 #LE O VALOR DO RELOGIO
+CEQ @0 #COMPARA SE O VALOR DO RELOGIO E 0
+JEQ @display #SE NAO APENAS ATUALIZA
+JSR @regressiva_sec1 #SE SIM, ROTINA DE REGRESSIVA
+JMP @display
+
+regressiva_sec1:
+STA R0 @387 
+
+LDI R1 $0
+SOMA R1 @2
+SOMA R1 @3
+SOMA R1 @4
+SOMA R1 @5
+SOMA R1 @6
+SOMA R1 @7
+CEQ R1 @0
+JEQ @fim #ve se a soma de todos é 0, se sim, acabou a contagem e apenas retorna
+
+
+LDI R3 $9
+LDI R2 $5
+LDA R0 @2
+CEQ R0 @0
+JEQ R0 @regressiva_sec2 #se tenta subtrair quando zero, subtrai na proxima unidade
+SUBI R0 $1
+STA R0 @2
+RET
+
+regressiva_sec2:
+STA R3 @2
+LDA R0 @3
+CEQ R0 @0
+JEQ R0 @regressiva_min1 #se tenta subtrair quando zero, subtrai na proxima unidade
+SUBI R0 $1
+STA R0 @3
+RET
+
+regressiva_min1:
+STA R2 @3
+LDA R0 @4
+CEQ R0 @0
+JEQ R0 @regressiva_min2 #se tenta subtrair quando zero, subtrai na proxima unidade
+SUBI R0 $1
+STA R0 @4
+RET
+
+regressiva_min2:
+STA R3 @4
+LDA R0 @5
+CEQ R0 @0
+JEQ R0 @regressiva_hora1 #se tenta subtrair quando zero, subtrai na proxima unidade
+SUBI R0 $1
+STA R0 @5
+RET
+
+regressiva_hora1:
+STA R2 @5
+LDA R0 @6
+CEQ R0 @0
+JEQ R0 @regressiva_hora2 #se tenta subtrair quando zero, subtrai na proxima unidade
+SUBI R0 $1
+STA R0 @6
+RET
+
+regressiva_hora2:
+STA R3 @6
+LDA R0 @7
+CEQ R0 @0
+JEQ R0 @pula_led #se tenta subtrair quando zero, nao faz nada
+SUBI R0 $1
+STA R0 @7
+JMP @pula_led
+fim:
+LDI R0 $1
+STA R0 @258
+pula_led:
+RET
